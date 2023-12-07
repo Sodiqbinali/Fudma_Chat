@@ -1,14 +1,13 @@
 require('dotenv').config()
 
 const express = require('express')
+const postRouter = require('./routes/PostRoute')
 
 //express app
 const app = express()
 
 //routes
-app.get('/', (req, res) => {
-    res.json({mssg: 'homepage'})
-})
+app.use(postRouter)
 
 //listening for request
 app.listen(process.env.PORT, () => {
