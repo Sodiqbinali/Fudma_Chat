@@ -44,7 +44,7 @@ const updatePost = async (req, res) => {
 
 //delete a post
 export const deletePost = async (req, res) => {
-  const id = req.params.id;
+  const {id} = req.params;
   const { userId } = req.body;
 
   try {
@@ -62,7 +62,7 @@ export const deletePost = async (req, res) => {
 
 // like/dislike a post
 export const likePost = async (req, res) => {
-  const id = req.params.id;
+  const {id} = req.params;
   const { userId } = req.body;
   try {
     const post = await PostModel.findById(id);
@@ -80,14 +80,14 @@ export const likePost = async (req, res) => {
 
 // Get timeline posts
 export const getTimelinePosts = async (req, res) => {
-  const userId = req.params.id
+  const {id} = req.params
   try {
-    const currentUserPosts = await PostModel.find({ userId: userId });
+    const currentUserPosts = await PostModel.find({ userId: id });
 
     const followingPosts = await UserModel.aggregate([
       { 
         $match: {
-          _id: new mongoose.Types.ObjectId(userId),
+          _id: new mongoose.Types.ObjectId(id),
         },
       },
       {
