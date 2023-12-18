@@ -43,7 +43,7 @@ const updatePost = async (req, res) => {
   };
 
 //delete a post
-export const deletePost = async (req, res) => {
+const deletePost = async (req, res) => {
   const {id} = req.params;
   const { userId } = req.body;
 
@@ -61,7 +61,7 @@ export const deletePost = async (req, res) => {
 };
 
 // like/dislike a post
-export const likePost = async (req, res) => {
+const likePost = async (req, res) => {
   const {id} = req.params;
   const { userId } = req.body;
   try {
@@ -79,7 +79,7 @@ export const likePost = async (req, res) => {
 };
 
 // Get timeline posts
-export const getTimelinePosts = async (req, res) => {
+const getTimelinePosts = async (req, res) => {
   const {id} = req.params
   try {
     const currentUserPosts = await PostModel.find({ userId: id });
@@ -121,5 +121,9 @@ export const getTimelinePosts = async (req, res) => {
 
 module.exports = {
     createPost,
-    getPost
+    getPost,
+    updatePost,
+    deletePost,
+    likePost,
+    getTimelinePosts
 }
