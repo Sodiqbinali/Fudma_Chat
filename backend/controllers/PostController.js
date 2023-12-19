@@ -32,7 +32,7 @@ const updatePost = async (req, res) => {
     const { userId } = req.body;
   
     try {
-      const post = await PostModel.findById(id);
+      const post = await Post.findById(id);
       if (post.userId === userId) {
         await post.updateOne({ $set: req.body });
         res.status(200).json("Post updated!");
@@ -48,7 +48,7 @@ const deletePost = async (req, res) => {
   const { userId } = req.body;
 
   try {
-    const post = await PostModel.findById(id);
+    const post = await Post.findById(id);
     if (post.userId === userId) {
       await post.deleteOne();
       res.status(200).json("Post deleted.");
@@ -65,7 +65,7 @@ const likePost = async (req, res) => {
   const {id} = req.params;
   const { userId } = req.body;
   try {
-    const post = await PostModel.findById(id);
+    const post = await Post.findById(id);
     if (post.likes.includes(userId)) {
       await post.updateOne({ $pull: { likes: userId } });
       res.status(200).json("Post disliked");
@@ -82,7 +82,7 @@ const likePost = async (req, res) => {
 const getTimelinePosts = async (req, res) => {
   const {id} = req.params
   try {
-    const currentUserPosts = await PostModel.find({ userId: id });
+    const currentUserPosts = await Post.find({ userId: id });
 
     const followingPosts = await UserModel.aggregate([
       { 
