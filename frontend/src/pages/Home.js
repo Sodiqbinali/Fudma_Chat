@@ -1,9 +1,15 @@
 import React from 'react'
+import ProfileSide from '../components/ProfileSide/ProfileSide'
+import PostSide from '../components/PostSide/PostSide'
+import RightSide from '../components/RightSide/RightSide'
+import './Home.css'
 
 const Home = () => {
   return (
-    <div className='home'>
-      <h2>Home</h2>
+    <div className='Home'>
+      <ProfileSide/>
+      <PostSide />
+      <RightSide />
     </div>
   )
 }
