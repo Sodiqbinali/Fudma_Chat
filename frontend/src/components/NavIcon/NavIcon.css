@@ -1,0 +1,11 @@
+.home {
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: -10px;
+}
+
+.home img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
