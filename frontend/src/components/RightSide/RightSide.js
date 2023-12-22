@@ -1,15 +1,16 @@
 import React from 'react'
 import './RightSide.css'
 import NavIcon from '../NavIcon/NavIcon'
+import TrendCard from '../TrendCard/TrendCard'
 
 function RightSide() {
   return (
     <div className="RightSide">
     {/* Side Navbar */}
+      <NavIcon />
 
-    <NavIcon />
    {/* TrendCard */}
-   
+      <TrendCard/>
 
    {/* Share buttong */}
    
