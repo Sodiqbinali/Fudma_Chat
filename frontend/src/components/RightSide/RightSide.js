@@ -13,7 +13,9 @@ function RightSide() {
       <TrendCard/>
 
    {/* Share buttong */}
-   
+   <button className="button r-button" onClick={() => {}}>
+        Share
+      </button>
 
  </div>
   )
