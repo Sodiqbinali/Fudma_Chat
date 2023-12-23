@@ -23,3 +23,9 @@
 .navIcons>img:hover{
     cursor: pointer;
 }
+
+.r-button{
+    height:3rem;
+    width: 80%;
+    align-self: center;
+}
