@@ -1,9 +1,10 @@
 import React from 'react'
+import LogoSearch from '../LogoSearch/LogoSearch'
 
 const ProfileLeft = () => {
   return (
-    <div>
-       <h1>Profile Left</h1>
+    <div className='ProfileLeft'>
+       <LogoSearch/>
     </div>
   )
 }
