@@ -1,4 +1,4 @@
-import React from 'react'
+import { React, useState } from 'react'
 import './infoCard.css'
 import { UilPen } from '@iconscout/react-unicons'
 import ProfileModal from "../ProfileModal/ProfileModal";
@@ -17,6 +17,7 @@ const InfoCard = () => {
               width="2rem"
               height="1.2rem"
               onClick={() => setModalOpened(true)}
+              
             />
             <ProfileModal
               modalOpened={modalOpened}
