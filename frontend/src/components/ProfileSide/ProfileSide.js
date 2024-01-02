@@ -1,9 +1,12 @@
 import React from 'react'
+import LogoSearch from '../LogoSearch/LogoSearch'
+import ProfileCard from '../ProfileCard/ProfileCard'
 
 function ProfileSide() {
   return (
-    <div>
-      <h2>ProfileSide</h2>
+    <div className='ProfileSide'>
+      <LogoSearch />
+      <ProfileCard />
     </div>
   )
 }
