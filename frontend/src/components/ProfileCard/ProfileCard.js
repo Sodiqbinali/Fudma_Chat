@@ -14,7 +14,30 @@ const ProfileCard = () => {
         <span>Sodiq Bin Aliu</span>
         <span>Write about yourself</span>
       </div>
-      
+      <div className="followStatus">
+        <hr />
+        <div>
+          <div className="follow">
+            <span>23</span>
+            <span>Followers</span>
+          </div>
+          <div className="vl"></div>
+          <div className="follow">
+            <span>30</span>
+            <span>Following</span>
+          </div>
+          {/* for profilepage */}
+           
+              <div className="vl"></div>
+              <div className="follow">
+                <span>5</span>
+                <span>Posts</span>
+              </div>{" "}
+           
+        </div>
+        <hr />
+      </div>
+
     </div>
   )
 }
