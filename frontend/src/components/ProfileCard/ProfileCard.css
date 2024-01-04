@@ -26,3 +26,16 @@
     bottom: -3rem;
     box-shadow: var(--profileShadow);
   }
+
+  /* Profile Name */
+.ProfileName {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+    gap: 10px;
+  }
+  
+  .ProfileName > span:nth-of-type(1) {
+    font-weight: bold;
+  }
