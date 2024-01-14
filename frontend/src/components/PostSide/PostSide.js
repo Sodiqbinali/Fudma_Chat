@@ -1,9 +1,10 @@
 import React from 'react'
+import './PostSide.css'
 
 function PostSide() {
   return (
-    <div>
-      <h2>PostSide</h2>
+    <div className="PostSide">
+
     </div>
   )
 }
