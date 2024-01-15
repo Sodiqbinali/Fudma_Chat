@@ -1,4 +1,5 @@
 import React from 'react'
+import './PostShare.css'
 
 const PostShare = () => {
   return (
